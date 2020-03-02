@@ -7,6 +7,7 @@ import org.junit.Test;
 
 public class ScoreBoardTest {
 
+	private static final String THIRTY_FORTY = "Thirty Forty";
 	private static final String FIFTEEN_LOVE = "Fifteen Love";
 	private static final String LOVE_ALL = "Love All";
 
@@ -28,7 +29,7 @@ public class ScoreBoardTest {
 	public void scoreBoardResultShouldBeThirtyFortyIfFirstPlayerPointsIsTwoSecondPlayerPointsIsThree() {
 		ScoreBoard scoreBoard = new ScoreBoard(2, 3);
 
-		assertThat(scoreBoard.getResult(), CoreMatchers.is("Thirty Forty"));
+		assertThat(scoreBoard.getResult(), CoreMatchers.is(THIRTY_FORTY));
 	}
 
 }
