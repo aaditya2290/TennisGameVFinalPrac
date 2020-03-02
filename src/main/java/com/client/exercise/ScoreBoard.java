@@ -4,6 +4,7 @@ import com.client.exercise.constants.PointsToScoreMapper;
 
 public class ScoreBoard {
 
+	private static final String ALL = " All";
 	private int firstPlayerPoints;
 	private int secondPlayerPoints;
 
@@ -16,7 +17,7 @@ public class ScoreBoard {
 		String result;
 
 		if (firstPlayerPoints == secondPlayerPoints) {
-			result = PointsToScoreMapper.getScore(firstPlayerPoints) + " All";
+			result = PointsToScoreMapper.getScore(firstPlayerPoints) + ALL;
 		} else {
 			result = PointsToScoreMapper.getScore(firstPlayerPoints) + " "
 					+ PointsToScoreMapper.getScore(secondPlayerPoints);
