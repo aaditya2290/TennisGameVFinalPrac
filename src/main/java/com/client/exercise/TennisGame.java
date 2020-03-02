@@ -2,7 +2,14 @@ package com.client.exercise;
 
 public class TennisGame {
 
+	private int firstPlayerPoints;
+	private int secondPlayerPoints;
+
 	public String getPoints() {
-		return "0 - 0";
+		return firstPlayerPoints + " - " + secondPlayerPoints;
+	}
+
+	public GameBoard getBoard() {
+		return new GameBoard();
 	}
 }

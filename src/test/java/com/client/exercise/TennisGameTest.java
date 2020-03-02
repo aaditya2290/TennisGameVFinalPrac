@@ -12,4 +12,10 @@ public class TennisGameTest {
 
 		Assert.assertThat(game.getPoints(), CoreMatchers.is("0 - 0"));
 	}
+	
+	@Test
+	public void scoreBoardShouldDisplayLoveAllWhenGamePointsZeroZero(){
+		TennisGame game=new TennisGame();
+		Assert.assertThat(game.getBoard().getResult(), CoreMatchers.is("Love All"));
+	}
 }
