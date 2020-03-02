@@ -32,4 +32,11 @@ public class ScoreBoardTest {
 		assertThat(scoreBoard.getResult(), CoreMatchers.is(THIRTY_FORTY));
 	}
 
+	@Test
+	public void scoreBoardResultShouldBeThirtyAllIfBothPlayersPointsAreTwo() {
+		ScoreBoard scoreBoard = new ScoreBoard(2, 2);
+
+		assertThat(scoreBoard.getResult(), CoreMatchers.is("Thirty All"));
+	}
+
 }
