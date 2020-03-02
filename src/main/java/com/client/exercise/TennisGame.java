@@ -9,7 +9,7 @@ public class TennisGame {
 		return firstPlayerPoints + " - " + secondPlayerPoints;
 	}
 
-	public GameBoard getBoard() {
-		return new GameBoard();
+	public ScoreBoard getBoard() {
+		return new ScoreBoard();
 	}
 }
