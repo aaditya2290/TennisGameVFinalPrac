@@ -1,8 +1,9 @@
 package com.client.exercise;
 
+import com.client.exercise.constants.PointsToScoreMapper;
+
 public class ScoreBoard {
 
-	private static final String FIFTEEN_LOVE = "Fifteen Love";
 	private static final String LOVE_ALL = "Love All";
 	private int firstPlayerPoints;
 	private int secondPlayerPoints;
@@ -13,15 +14,16 @@ public class ScoreBoard {
 	}
 
 	public String getResult() {
-		if (firstPlayerPoints == 2 && secondPlayerPoints == 3) {
-			return "Thirty Forty";
-		} else if (firstPlayerPoints == 1 && secondPlayerPoints == 0) {
-			return FIFTEEN_LOVE;
-		} else if (firstPlayerPoints == 0 && secondPlayerPoints == 0) {
-			return LOVE_ALL;
+		String result;
+
+		if (firstPlayerPoints > 0 || secondPlayerPoints > 0) {
+			result = PointsToScoreMapper.getScore(firstPlayerPoints) + " "
+					+ PointsToScoreMapper.getScore(secondPlayerPoints);
 		} else {
-			return "";
+			return LOVE_ALL;
 		}
+
+		return result;
 	}
 
 }
