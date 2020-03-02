@@ -7,6 +7,7 @@ import org.junit.Test;
 
 public class ScoreBoardTest {
 
+	private static final String FIFTEEN_LOVE = "Fifteen Love";
 	private static final String LOVE_ALL = "Love All";
 
 	@Test
@@ -19,7 +20,7 @@ public class ScoreBoardTest {
 	@Test
 	public void scoreBoardResultShouldBeFifteenLoveIfFirstPlayerPointsIsOne(){
 		ScoreBoard scoreBoard = new ScoreBoard(1, 0);
-		assertThat(scoreBoard.getResult(), CoreMatchers.is("Fifteen Love"));
+		assertThat(scoreBoard.getResult(), CoreMatchers.is(FIFTEEN_LOVE));
 	}
 
 }
