@@ -13,7 +13,9 @@ public class ScoreBoard {
 	}
 
 	public String getResult() {
-		if (firstPlayerPoints == 1 && secondPlayerPoints == 0) {
+		if (firstPlayerPoints == 2 && secondPlayerPoints == 3) {
+			return "Thirty Forty";
+		} else if (firstPlayerPoints == 1 && secondPlayerPoints == 0) {
 			return FIFTEEN_LOVE;
 		} else if (firstPlayerPoints == 0 && secondPlayerPoints == 0) {
 			return LOVE_ALL;

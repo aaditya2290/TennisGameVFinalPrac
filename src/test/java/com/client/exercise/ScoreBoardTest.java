@@ -12,15 +12,23 @@ public class ScoreBoardTest {
 
 	@Test
 	public void scoreBoardResultShouldBeLoveAllIfBothPlayersPointsAreZero() {
-		ScoreBoard scoreBoard = new ScoreBoard(0,0);
-		
+		ScoreBoard scoreBoard = new ScoreBoard(0, 0);
+
 		assertThat(scoreBoard.getResult(), CoreMatchers.is(LOVE_ALL));
 	}
-	
+
 	@Test
-	public void scoreBoardResultShouldBeFifteenLoveIfFirstPlayerPointsIsOne(){
+	public void scoreBoardResultShouldBeFifteenLoveIfFirstPlayerPointsIsOne() {
 		ScoreBoard scoreBoard = new ScoreBoard(1, 0);
+
 		assertThat(scoreBoard.getResult(), CoreMatchers.is(FIFTEEN_LOVE));
+	}
+
+	@Test
+	public void scoreBoardResultShouldBeThirtyFortyIfFirstPlayerPointsIsTwoSecondPlayerPointsIsThree() {
+		ScoreBoard scoreBoard = new ScoreBoard(2, 3);
+
+		assertThat(scoreBoard.getResult(), CoreMatchers.is("Thirty Forty"));
 	}
 
 }
