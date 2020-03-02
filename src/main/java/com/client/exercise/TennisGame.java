@@ -10,6 +10,6 @@ public class TennisGame {
 	}
 
 	public ScoreBoard getBoard() {
-		return new ScoreBoard();
+		return new ScoreBoard(firstPlayerPoints, firstPlayerPoints);
 	}
 }
