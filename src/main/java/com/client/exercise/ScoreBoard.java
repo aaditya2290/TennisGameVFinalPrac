@@ -2,6 +2,7 @@ package com.client.exercise;
 
 public class ScoreBoard {
 
+	private static final String LOVE_ALL = "Love All";
 	private int firstPlayerPoints;
 	private int secondPlayerPoints;
 
@@ -12,7 +13,7 @@ public class ScoreBoard {
 
 	public String getResult() {
 		if (firstPlayerPoints == 0 && secondPlayerPoints == 0) {
-			return "Love All";
+			return LOVE_ALL;
 		} else {
 			return "";
 		}
