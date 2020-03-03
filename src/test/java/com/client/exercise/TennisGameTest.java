@@ -11,10 +11,14 @@ public class TennisGameTest {
 	private static final String LOVE_ALL = "Love All";
 
 	TennisGame game;
+	Player firstPlayer;
+	Player secondPlayer;
 
 	@Before
 	public void setUp() {
-		game = new TennisGame();
+		firstPlayer = new Player();
+		secondPlayer = new Player();
+		game = new TennisGame(firstPlayer, secondPlayer);
 	}
 
 	@Test

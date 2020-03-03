@@ -5,22 +5,22 @@ import com.client.exercise.constants.PointsToScoreMapper;
 public class ScoreBoard {
 
 	private static final String ALL = " All";
-	private int firstPlayerPoints;
-	private int secondPlayerPoints;
+	private Player firstPlayer;
+	private Player secondPlayer;
 
-	public ScoreBoard(int firstPlayerPoints, int secondPlayerPoints) {
-		this.firstPlayerPoints = firstPlayerPoints;
-		this.secondPlayerPoints = secondPlayerPoints;
+	public ScoreBoard(Player firstPlayer, Player secondPlayer) {
+		this.firstPlayer = firstPlayer;
+		this.secondPlayer = secondPlayer;
 	}
 
 	public String getResult() {
 		String result;
 
-		if (firstPlayerPoints == secondPlayerPoints) {
-			result = PointsToScoreMapper.getScore(firstPlayerPoints) + ALL;
+		if (firstPlayer.getPoints() == secondPlayer.getPoints()) {
+			result = PointsToScoreMapper.getScore(firstPlayer.getPoints()) + ALL;
 		} else {
-			result = PointsToScoreMapper.getScore(firstPlayerPoints) + " "
-					+ PointsToScoreMapper.getScore(secondPlayerPoints);
+			result = PointsToScoreMapper.getScore(firstPlayer.getPoints()) + " "
+					+ PointsToScoreMapper.getScore(secondPlayer.getPoints());
 		}
 
 		return result;
